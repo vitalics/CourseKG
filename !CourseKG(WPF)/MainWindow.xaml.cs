@@ -23,6 +23,7 @@ namespace _CourseKG_WPF_
 		public MainWindow()
 		{
 			InitializeComponent();
+            //lol
 		}
 	}
 }
