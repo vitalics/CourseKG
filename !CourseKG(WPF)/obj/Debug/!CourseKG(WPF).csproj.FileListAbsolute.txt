@@ -1,1 +1,2 @@
 D:\С #\!ОП 2 сем\!CourseKG(WPF)\!CourseKG(WPF)\bin\Debug\!CourseKG(WPF).exe.config
+C:\Users\zzz3bra\Source\Repos\CourseKG\!CourseKG(WPF)\bin\Debug\!CourseKG(WPF).exe.config
