@@ -1,9 +1,9 @@
 ﻿<Window x:Name="Main_Theme" x:Class="_CourseKG_WPF_.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Main theme" MinHeight="350" MinWidth="525">
-	<Canvas Margin="10">
-		<Button Content="Shadow" Canvas.Left="650" Canvas.Top="10" Width="75" Click="Button_Click"/>
+        Title="Main theme" MinHeight="600" MinWidth="800" MaxHeight="600" MaxWidth="800" Width="755.224">
+	<Canvas>
+		<Button Content="Shooter" Canvas.Left="553" Canvas.Top="10" Width="197" Click="Shooter_click" Height="123"/>
 		<Menu Height="20" Width="40">
 			<MenuItem Header="File" Height="20" Width="40">
 				<MenuItem Header="Open Shooter" Click="Shooter_click"></MenuItem>
@@ -12,5 +12,8 @@
 				<MenuItem Header="Exit" Click="Exit_click"></MenuItem>
 			</MenuItem>
 		</Menu>
+		<Calendar  Height="170" Width="190" Canvas.Left="10" Canvas.Top="324">
+		</Calendar>
+		<Button Content="Shadow" Canvas.Left="553" Canvas.Top="138" Width="197" Height="123" Click="Shadow_click"/>
 	</Canvas>
 </Window>

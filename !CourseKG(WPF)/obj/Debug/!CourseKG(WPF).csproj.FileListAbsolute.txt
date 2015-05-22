@@ -15,3 +15,5 @@ D:\С #\!ОП 2 сем\!CourseKG(WPF)\!CourseKG(WPF)\obj\Debug\_CourseKG_WPF_.Pr
 D:\С #\!ОП 2 сем\!CourseKG(WPF)\!CourseKG(WPF)\obj\Debug\!CourseKG(WPF).csproj.GenerateResource.Cache
 D:\С #\!ОП 2 сем\!CourseKG(WPF)\!CourseKG(WPF)\obj\Debug\!CourseKG(WPF).exe
 D:\С #\!ОП 2 сем\!CourseKG(WPF)\!CourseKG(WPF)\obj\Debug\!CourseKG(WPF).pdb
+D:\С #\!ОП 2 сем\!CourseKG(WPF)\!CourseKG(WPF)\obj\Debug\Interop.MSScriptControl.dll
+D:\С #\!ОП 2 сем\!CourseKG(WPF)\!CourseKG(WPF)\obj\Debug\!CourseKG(WPF).csproj.ResolveComReference.cache

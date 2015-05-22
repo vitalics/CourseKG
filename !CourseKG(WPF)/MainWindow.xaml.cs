@@ -1,4 +1,5 @@
-﻿using System;
+﻿#region Usings
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+#endregion
 
 namespace _CourseKG_WPF_
 {
@@ -26,6 +28,9 @@ namespace _CourseKG_WPF_
 		public MainWindow()
 		{
 			InitializeComponent();
+			//test parser
+			Parser parser = new Parser();
+			parser.Parse();
 		}
 		#region Events
 		/// <summary>
@@ -33,22 +38,18 @@ namespace _CourseKG_WPF_
 		/// </summary>
 		/// <param name="sender">The source of the event.</param>
 		/// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			Shooter shooter = new Shooter();
-			shooter.ShowDialog();
-		}
-
 		private void Shooter_click(object sender, RoutedEventArgs e)
 		{
+			this.Hide();
 			Shooter shooter = new Shooter();
-			shooter.ShowDialog();
+			shooter.Show();
 		}
 
 		private void Shadow_click(object sender, RoutedEventArgs e)
 		{
+			this.Hide();
 			Shadow shadow = new Shadow();
-			shadow.ShowDialog();
+			shadow.Show();
 		}
 
 		private void Exit_click(object sender, RoutedEventArgs e)

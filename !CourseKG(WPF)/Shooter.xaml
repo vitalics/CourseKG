@@ -1,9 +1,27 @@
-﻿<Window x:Class="_CourseKG_WPF_.Shooter"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Shooter" MinHeight="350" MinWidth="525">
-	<Grid HorizontalAlignment="Left" Height="492" Margin="2,14,-1,-2" VerticalAlignment="Top" Width="759">
-		<Canvas HorizontalAlignment="Left" Height="472" Margin="10,10,0,0" VerticalAlignment="Top" Width="739">
-		</Canvas>
-	</Grid>
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="_CourseKG_WPF_.Shooter"
+        Title="Shooter" MinHeight="350" MinWidth="525" MaxHeight="350" MaxWidth="525" d:DesignWidth="525" d:DesignHeight="350">
+	<Canvas>
+		<Menu>
+			<MenuItem Header="File" >
+				<MenuItem Header="Open Main Window" Click="MainWindow_click"/>
+				<MenuItem Header="Open Shadow" Click="Shadow_click"/>
+				<Separator></Separator>
+				<MenuItem Header="Exit" Click="MenuItem_Click"/>
+			</MenuItem>
+		</Menu>
+		<Label Content="Write line X1" Canvas.Left="10" Canvas.Top="100" Height="30" Width="90"/>
+		<Label Content="Write line Y1" Canvas.Left="10" Canvas.Top="150" Height="30" Width="90"/>
+		<Label Content="Write line X2" Canvas.Left="10" Canvas.Top="200" Height="30" Width="90"/>
+		<Label Content="Write line Y2" Canvas.Left="10" Canvas.Top="250" Height="30" Width="90"/>
+		<TextBox Height="30" Canvas.Left="105" TextWrapping="Wrap" Text="TextBox" Canvas.Top="100" Width="90"/>
+		<TextBox Height="30" Canvas.Left="105" TextWrapping="Wrap" Text="TextBox" Canvas.Top="150" Width="90"/>
+		<TextBox Height="30" Canvas.Left="105" TextWrapping="Wrap" Text="TextBox" Canvas.Top="200" Width="90"/>
+		<TextBox Height="30" Canvas.Left="105" TextWrapping="Wrap" Text="TextBox" Canvas.Top="250" Width="90"/>
+		<Label Content="Write equation" Canvas.Left="230" Canvas.Top="100"  Height="30" Width="90"/>
+		<TextBox Height="30" Canvas.Left="325" TextWrapping="Wrap" Text="TextBox" Canvas.Top="100" Width="120"/>
+		<Button Content="CALCULATE!!!!" Canvas.Left="230" Canvas.Top="150" Width="215" Height="130" Click="Calculate_click"/>
+	</Canvas>
 </Window>
