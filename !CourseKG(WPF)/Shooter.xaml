@@ -1,0 +1,9 @@
+﻿<Window x:Class="_CourseKG_WPF_.Shooter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shooter" MinHeight="350" MinWidth="525">
+	<Grid HorizontalAlignment="Left" Height="492" Margin="2,14,-1,-2" VerticalAlignment="Top" Width="759">
+		<Canvas HorizontalAlignment="Left" Height="472" Margin="10,10,0,0" VerticalAlignment="Top" Width="739">
+		</Canvas>
+	</Grid>
+</Window>

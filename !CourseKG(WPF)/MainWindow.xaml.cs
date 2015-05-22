@@ -20,9 +20,41 @@ namespace _CourseKG_WPF_
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="MainWindow"/> class.
+		/// </summary>
 		public MainWindow()
 		{
 			InitializeComponent();
 		}
+		#region Events
+		/// <summary>
+		/// Handles the Click event of the Button control.
+		/// </summary>
+		/// <param name="sender">The source of the event.</param>
+		/// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			Shooter shooter = new Shooter();
+			shooter.ShowDialog();
+		}
+
+		private void Shooter_click(object sender, RoutedEventArgs e)
+		{
+			Shooter shooter = new Shooter();
+			shooter.ShowDialog();
+		}
+
+		private void Shadow_click(object sender, RoutedEventArgs e)
+		{
+			Shadow shadow = new Shadow();
+			shadow.ShowDialog();
+		}
+
+		private void Exit_click(object sender, RoutedEventArgs e)
+		{
+			Environment.Exit(0);
+		}
+		#endregion
 	}
 }
