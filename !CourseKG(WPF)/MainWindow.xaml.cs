@@ -22,6 +22,7 @@ namespace _CourseKG_WPF_
 	{
 		public MainWindow()
 		{
+            //lolipop
 			InitializeComponent();
 		}
 	}
