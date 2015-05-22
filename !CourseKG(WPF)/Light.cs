@@ -18,9 +18,44 @@ namespace _CourseKG_WPF_
     class Light
     {
         #region Public Fields
-        public Color StraightLineColor { get; private set; }
-        public Color CurveLineColor { get; private set; }
-
+        public Color FirstLineColor { get; private set; }
+        /// <summary>
+        /// Coefficient which encounters material, lies in range 0..1
+        /// </summary>
+        public int FirstLineDiffuseCoeff { get; private set; }
+        /// <summary>
+        /// Coefficient which encounters material, lies in range 0..1
+        /// </summary>
+        public int SecondLineDiffuseCoeff { get; private set; }
+        public Color SecondLineColor { get; private set; }
+        int SunBrightness { get; private set; }
         #endregion
+
+        public Light(Color firstLineColor, Color secondLineColor, int firstLineDiffuseCoeff, int secondLineDiffuseCoeff, int sunBrightness)
+        {
+            FirstLineColor = firstLineColor;
+            SecondLineColor = secondLineColor;
+            FirstLineDiffuseCoeff = firstLineDiffuseCoeff;
+            SecondLineDiffuseCoeff = secondLineDiffuseCoeff;
+            SunBrightness = sunBrightness;
+        }
+
+        void EnlightRectangleFirstLine(Rectangle rect)
+        {
+            Color color = new Color();
+            color.R = (byte)(SunBrightness * FirstLineDiffuseCoeff * FirstLineColor.R);
+            color.G = (byte)(SunBrightness * FirstLineDiffuseCoeff * FirstLineColor.G);
+            color.B = (byte)(SunBrightness * FirstLineDiffuseCoeff * FirstLineColor.B);
+            rect.Fill = new SolidColorBrush(color);
+        }
+
+        void EnlightRectangleSecondLine(Rectangle rect)
+        {
+            Color color = new Color();
+            color.R = (byte)(SunBrightness * FirstLineDiffuseCoeff * FirstLineColor.R);
+            color.G = (byte)(SunBrightness * FirstLineDiffuseCoeff * FirstLineColor.G);
+            color.B = (byte)(SunBrightness * FirstLineDiffuseCoeff * FirstLineColor.B);
+            rect.Fill = new SolidColorBrush(color);
+        }
     }
 }
