@@ -148,6 +148,46 @@ namespace _CourseKG_WPF_
 				this.Error4.Content = string.Empty;
 			}
 		}
+		private void Error_TextChanged5(object sender, TextChangedEventArgs e)
+		{
+			string text = (sender as TextBox).Text;
+			int a;
+			bool flag = true;
+			try
+			{
+				a = int.Parse(text);
+			}
+			catch
+			{
+				this.Error5.Content = "Incorrect";
+				flag = false;
+			}
+
+			if (flag)
+			{
+				this.Error5.Content = string.Empty;
+			}
+		}
+		private void Error_TextChanged6(object sender, TextChangedEventArgs e)
+		{
+			string text = (sender as TextBox).Text;
+			int a;
+			bool flag = true;
+			try
+			{
+				a = int.Parse(text);
+			}
+			catch
+			{
+				this.Error6.Content = "Incorrect";
+				flag = false;
+			}
+
+			if (flag)
+			{
+				this.Error6.Content = string.Empty;
+			}
+		}
 		#endregion
 	}
 }
