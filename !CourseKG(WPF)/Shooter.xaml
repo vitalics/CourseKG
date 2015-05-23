@@ -1,27 +1,47 @@
 ﻿<Window
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="_CourseKG_WPF_.Shooter"
-        Title="Shooter" MinHeight="350" MinWidth="525" MaxHeight="350" MaxWidth="525" d:DesignWidth="525" d:DesignHeight="350">
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="_CourseKG_WPF_.Shooter"
+		Title="Shooter" MinHeight="350" MinWidth="525" MaxHeight="350" MaxWidth="525" d:DesignWidth="525" d:DesignHeight="350">
 	<Canvas>
 		<Menu>
 			<MenuItem Header="File" >
 				<MenuItem Header="Open Main Window" Click="MainWindow_click"/>
 				<MenuItem Header="Open Shadow" Click="Shadow_click"/>
 				<Separator></Separator>
-				<MenuItem Header="Exit" Click="MenuItem_Click"/>
+				<MenuItem Header="Exit" Click="Exit_click"/>
 			</MenuItem>
 		</Menu>
-		<Label Content="Write line X1" Canvas.Left="10" Canvas.Top="100" Height="30" Width="90"/>
-		<Label Content="Write line Y1" Canvas.Left="10" Canvas.Top="150" Height="30" Width="90"/>
+		<Label Content="Write line X1" Canvas.Left="10" Canvas.Top="82" Height="30" Width="90"/>
+		<Label Content="Write line Y1" Canvas.Left="10" Canvas.Top="140" Height="30" Width="90"/>
 		<Label Content="Write line X2" Canvas.Left="10" Canvas.Top="200" Height="30" Width="90"/>
-		<Label Content="Write line Y2" Canvas.Left="10" Canvas.Top="250" Height="30" Width="90"/>
-		<TextBox Height="30" Canvas.Left="105" TextWrapping="Wrap" Text="TextBox" Canvas.Top="100" Width="90"/>
-		<TextBox Height="30" Canvas.Left="105" TextWrapping="Wrap" Text="TextBox" Canvas.Top="150" Width="90"/>
-		<TextBox Height="30" Canvas.Left="105" TextWrapping="Wrap" Text="TextBox" Canvas.Top="200" Width="90"/>
-		<TextBox Height="30" Canvas.Left="105" TextWrapping="Wrap" Text="TextBox" Canvas.Top="250" Width="90"/>
+		<Label Content="Write line Y2" Canvas.Left="10" Canvas.Top="260" Height="30" Width="90" RenderTransformOrigin="0.5,0.533"/>
+		<Label x:Name="Error1"  FontSize="10" FontFamily="Calibri" Canvas.Left="10" Canvas.Top="115" Height="20" Width="185" Foreground="Red"/>
+		<Label x:Name="Error2" FontSize="10" FontFamily="Calibri" Canvas.Left="10" Canvas.Top="175" Height="20" Width="185" Foreground="Red"/>
+		<Label x:Name="Error3"  FontSize="10" FontFamily="Calibri" Canvas.Left="10" Canvas.Top="235" Height="20" Width="185" Foreground="Red"/>
+		<Label x:Name="Error4"  FontSize="10" FontFamily="Calibri" Canvas.Left="10" Canvas.Top="290" Height="20" Width="185" Foreground="Red"/>
 		<Label Content="Write equation" Canvas.Left="230" Canvas.Top="100"  Height="30" Width="90"/>
-		<TextBox Height="30" Canvas.Left="325" TextWrapping="Wrap" Text="TextBox" Canvas.Top="100" Width="120"/>
-		<Button Content="CALCULATE!!!!" Canvas.Left="230" Canvas.Top="150" Width="215" Height="130" Click="Calculate_click"/>
+		<TextBox x:Name="Text1" Height="30" Canvas.Left="105" TextWrapping="Wrap" Text="" Canvas.Top="80" Width="90" TextChanged="Error_TextChanged1"/>
+		<TextBox x:Name="Text2" Height="30" Canvas.Left="105" TextWrapping="Wrap" Text="" Canvas.Top="140" Width="90" TextChanged="Error_TextChanged2"/>
+		<TextBox x:Name="Text3" Height="30" Canvas.Left="105" TextWrapping="Wrap" Text="" Canvas.Top="200" Width="90" TextChanged="Error_TextChanged3"/>
+		<TextBox x:Name="Text4" Height="30" Canvas.Left="105" TextWrapping="Wrap" Text="" Canvas.Top="260" Width="90" TextChanged="Error_TextChanged4"/>
+		<TextBox x:Name="EquationText" Height="30" Canvas.Left="325" TextWrapping="Wrap" Text="" Canvas.Top="100" Width="120"/>
+		<Button Background="WhiteSmoke" FontFamily="Times New Roman" FontSize ="16"  x:Name="Button" Content="CALCULATE!!!!" Canvas.Left="230" Canvas.Top="150" Width="215" Height="130" Click="Calculate_click">
+			<Button.Triggers>
+				<EventTrigger RoutedEvent="Button.Loaded">
+					<BeginStoryboard>
+						<Storyboard>
+							<DoubleAnimation
+								Storyboard.TargetName ="Button"
+								Storyboard.TargetProperty="Opacity"
+								From="1.0" To="0.0" Duration="0:0:1"
+								AutoReverse="True" RepeatBehavior="Forever">
+							</DoubleAnimation>
+						</Storyboard>
+					</BeginStoryboard>
+				</EventTrigger>
+			</Button.Triggers>
+		</Button>
+		<Label Content="(C) 2015 Dream Team. All right reserved" FontFamily="VIVALDI" FontSize="20" Canvas.Top="285" Width="300" Canvas.Left="200"/>
 	</Canvas>
 </Window>

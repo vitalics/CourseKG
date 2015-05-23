@@ -26,6 +26,11 @@ namespace _CourseKG_WPF_
 			InitializeComponent();
 		}
 		#region Events
+		/// <summary>
+		/// This event open Main Window.
+		/// </summary>
+		/// <param name="sender">The source of the event.</param>
+		/// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
 		private void MainWindow_click(object sender, RoutedEventArgs e)
 		{
 			this.Hide();
@@ -33,6 +38,11 @@ namespace _CourseKG_WPF_
 			mw.Show();
 		}
 
+		/// <summary>
+		/// This event open "Shooter" window.
+		/// </summary>
+		/// <param name="sender">The source of the event.</param>
+		/// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
 		private void Shooter_click(object sender, RoutedEventArgs e)
 		{
 			this.Hide();
@@ -40,6 +50,11 @@ namespace _CourseKG_WPF_
 			shooter.Show();
 		}
 
+		/// <summary>
+		/// This event close the application.
+		/// </summary>
+		/// <param name="sender">The source of the event.</param>
+		/// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
 		private void Exit_click(object sender, RoutedEventArgs e)
 		{
 			Environment.Exit(0);

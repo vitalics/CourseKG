@@ -29,12 +29,12 @@ namespace _CourseKG_WPF_
 		{
 			InitializeComponent();
 			//test parser
-			Parser parser = new Parser();
-			parser.Parse();
+			//Parser parser = new Parser();
+			//parser.Parse();
 		}
 		#region Events
 		/// <summary>
-		/// Handles the Click event of the Button control.
+		/// this event open "Shooter" window.
 		/// </summary>
 		/// <param name="sender">The source of the event.</param>
 		/// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
@@ -45,6 +45,11 @@ namespace _CourseKG_WPF_
 			shooter.Show();
 		}
 
+		/// <summary>
+		/// This event open "Shadow" window.
+		/// </summary>
+		/// <param name="sender">The source of the event.</param>
+		/// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
 		private void Shadow_click(object sender, RoutedEventArgs e)
 		{
 			this.Hide();
@@ -52,6 +57,11 @@ namespace _CourseKG_WPF_
 			shadow.Show();
 		}
 
+		/// <summary>
+		/// This event close the application.
+		/// </summary>
+		/// <param name="sender">The source of the event.</param>
+		/// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
 		private void Exit_click(object sender, RoutedEventArgs e)
 		{
 			Environment.Exit(0);

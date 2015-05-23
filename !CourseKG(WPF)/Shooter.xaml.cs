@@ -26,27 +26,127 @@ namespace _CourseKG_WPF_
 			InitializeComponent();
 		}
 		#region Events
+		/// <summary>
+		/// This event open Main Window.
+		/// </summary>
+		/// <param name="sender">The source of the event.</param>
+		/// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
 		private void MainWindow_click(object sender, RoutedEventArgs e)
 		{
-			this.Hide();
+			this.Close();
 			MainWindow mw = new MainWindow();
 			mw.Show();
 		}
 
+		/// <summary>
+		/// Handles the click event open "Shadow" window.
+		/// </summary>
+		/// <param name="sender">The source of the event.</param>
+		/// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
 		private void Shadow_click(object sender, RoutedEventArgs e)
 		{
-			this.Hide();
+			this.Close();
 			Shadow shadow = new Shadow();
 			shadow.Show();
 		}
 
-		private void MenuItem_Click(object sender, RoutedEventArgs e)
+		/// <summary>
+		/// This event close the application.
+		/// </summary>
+		/// <param name="sender">The source of the event.</param>
+		/// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+		private void Exit_click(object sender, RoutedEventArgs e)
 		{
 			Environment.Exit(0);
 		}
+		/// <summary>
+		/// This event event open message box.
+		/// </summary>
+		/// <param name="sender">The source of the event.</param>
+		/// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
 		private void Calculate_click(object sender, RoutedEventArgs e)
 		{
 			MessageBox.Show("LOL!!!!!!!!!!!");
+		}
+		private void Error_TextChanged1(object sender, TextChangedEventArgs e)
+		{
+			string text = (sender as TextBox).Text;
+			int a;
+			bool flag = true;
+			try
+			{
+				a = int.Parse(text);
+			}
+			catch
+			{
+				this.Error1.Content = "Incorrect number";
+				flag = false;
+			}
+
+			if (flag)
+			{
+				this.Error1.Content = string.Empty;
+			}
+		}
+		private void Error_TextChanged2(object sender, TextChangedEventArgs e)
+		{
+			string text = (sender as TextBox).Text;
+			int a;
+			bool flag = true;
+			try
+			{
+				a = int.Parse(text);
+			}
+			catch
+			{
+				this.Error2.Content = "Incorrect number";
+				flag = false;
+			}
+
+			if (flag)
+			{
+				this.Error2.Content = string.Empty;
+			}
+		}
+		private void Error_TextChanged3(object sender, TextChangedEventArgs e)
+		{
+			string text = (sender as TextBox).Text;
+			int a;
+			bool flag = true;
+			try
+			{
+				a = int.Parse(text);
+			}
+			catch
+			{
+				this.Error3.Content = "Incorrect number";
+				flag = false;
+			}
+
+			if (flag)
+			{
+				this.Error3.Content = string.Empty;
+			}
+		}
+		private void Error_TextChanged4(object sender, TextChangedEventArgs e)
+		{
+			string text = (sender as TextBox).Text;
+			int a;
+			bool flag = true;
+			try
+			{
+				a = int.Parse(text);
+			}
+			catch
+			{
+				this.Error4.Content = "Incorrect number";
+				flag = false;
+			}
+
+			if (flag)
+			{
+				this.Error4.Content = string.Empty;
+			}
 		}
 		#endregion
 	}
